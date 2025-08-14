@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 220px;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+select, input[type="range"] {
+  width: 100%;
+  margin-top: 3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  margin: 2px;
+  padding: 5px;
+  cursor: pointer;
+}
