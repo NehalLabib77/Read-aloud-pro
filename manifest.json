@@ -3,15 +3,37 @@
   "name": "Read Aloud Pro",
   "version": "1.0",
   "description": "Reads aloud selected text with controls and voice settings.",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": [
+    "scripting",
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "commands"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_title": "Read Aloud Pro"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "read-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Read selected text"
+    }
+  }
 }
